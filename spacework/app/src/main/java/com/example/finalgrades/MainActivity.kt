@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val nota3 = findViewById<EditText>(R.id.nota3)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
         val txtResultado = findViewById<TextView>(R.id.txtResultado)
+        val btnlimpiar = findViewById<Button>(R.id.btnlimpiar)
 
         btnCalcular.setOnClickListener {
 
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity() {
 
             txtResultado.text = mensaje
 
+        }
+
+        btnlimpiar.setOnClickListener {
+            nota1.text.clear()
+            nota2.text.clear()
+            nota3.text.clear()
+            txtResultado.text = ""
         }
 
 
